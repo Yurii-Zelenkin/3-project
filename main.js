@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (showAllBtn) {
     showAllBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      const swiperContainer = document.querySelector(".brands-repair__slider");
+      const swiperContainer = this.closest(
+        ".brands-repair__slider"
+      ).querySelector(".swiper-wrapper");
       swiperContainer.classList.toggle("expanded");
 
       this.textContent = swiperContainer.classList.contains("expanded")

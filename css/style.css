@@ -56,42 +56,13 @@ html {
   background: #f8f8f8;
 }
 
-.swiper-slide a {
+.swiper-slide img {
   display: block;
   width: 240px;
   height: 72px;
   margin-left: 16px;
   margin-top: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.lenovo {
-  background-image: url(../img/Len.svg);
-}
-
-.samsung {
-  background-image: url(../img/Sam.svg);
-}
-.applle {
-  background-image: url(../img/Apl.svg);
-}
-
-.vs {
-  background-image: url(../img/VS.svg);
-}
-.bosch {
-  background-image: url(../img/Bos.svg);
-}
-
-.hp {
-  background-image: url(../img/hp.svg);
-}
-.aser {
-  background-image: url(../img/aser.svg);
-}
-.sony {
-  background-image: url(../img/sony.svg);
+  object-fit: contain;
 }
 
 .swiper-pagination {
@@ -111,25 +82,44 @@ html {
 
   .brands-repair__slider {
     height: auto;
+    padding-bottom: 0;
   }
 
   .brands-repair__slider .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 224px);
-    grid-auto-rows: 72px;
     gap: 16px 24px;
-    max-height: 184px;
+    max-height: 160px;
     overflow: hidden;
-    margin-left: 8px;
+    margin-left: 24px;
   }
 
-  .brands-repair__slider.-non-slider.expanded .swiper-wrapper {
-    max-height: none;
+  .brands-repair__slider .swiper-wrapper.expanded {
+    max-height: 2000px;
+    margin-bottom: 16px;
   }
 
   .swiper-slide a {
-    width: 224px;
-    background-size: contain;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .swiper-slide {
+    width: 224px !important;
+    height: 72px !important;
+    margin: 0 !important;
+  }
+
+  .swiper-slide img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 72px;
+    margin: 0;
+    object-fit: contain;
   }
 
   .swiper-pagination {
@@ -178,26 +168,37 @@ html {
     gap: 24px 32px;
     max-height: 184px;
     overflow: hidden;
-    margin-left: 16px;
+    margin-left: 32px;
   }
 
   .swiper-slide a {
-    width: 240px;
-    height: 72px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  .swiper-slide a {
-    display: block;
-    width: 240px;
-    height: 72px;
-    margin-left: 16px;
-    margin-top: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
+  .swiper-slide img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 72px;
+    margin: 0;
+    object-fit: contain;
   }
 
   .brands-repair__title {
     padding-left: 32px;
+  }
+  .brands-repair__slider .swiper-wrapper.expanded {
+    max-height: 2000px;
+  }
+
+  .swiper-slide {
+    width: 240px !important;
+    height: 72px !important;
+    margin: 0 !important;
   }
 }
 
